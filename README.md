@@ -5,14 +5,11 @@
 <tr>
   <td valign="center">
       - I am currently pursuing my career as **Web Developer**.
-  </td>
-  <td>
+ 
       - I am currently learning **Data structure algorithm** and also interested in **Full Stack Web Development**.
-  </td>
-  <td>
+  
       - My Goal is to Contribute to as many **open source project** as possible.
-  </td>
-  <td>
+  
       - I love to create different types of **contents**.
   </td>
 # This is my daily.dev card.
