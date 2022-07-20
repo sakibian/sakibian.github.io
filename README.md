@@ -16,7 +16,7 @@
 
       
 <td >
-      <a href="https://app.daily.dev/sakibian"><img src="https://api.daily.dev/devcards/96f254b7cf174812bebccf03500479d5.png?r=zy2" width="300" alt="Bakibillah Sakib's Dev Card"/></a>
+      <a href="https://app.daily.dev/sakibian"><img src="https://api.daily.dev/devcards/96f254b7cf174812bebccf03500479d5.png?r=zy2" width="500" alt="Bakibillah Sakib's Dev Card"/></a>
     </td>
     
   </tr>
