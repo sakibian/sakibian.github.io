@@ -11,9 +11,8 @@
       - My Goal is to Contribute to as many **open source project** as possible.
   
       - I love to create different types of **contents**.
-  </td>
-# This is my daily.dev card.
-  <a href="https://app.daily.dev/sakibian"><img src="https://api.daily.dev/devcards/96f254b7cf174812bebccf03500479d5.png?r=zy2" width="400" alt="Bakibillah Sakib's Dev Card"/></a>
+  
+    <a href="https://app.daily.dev/sakibian"><img src="https://api.daily.dev/devcards/96f254b7cf174812bebccf03500479d5.png?r=zy2" width="400" alt="Bakibillah Sakib's Dev Card"/></a>
   </td>
 </tr>
 </table>
