@@ -1,16 +1,23 @@
 # Hi, I'm Bakibillah Sakib <img src="https://github.com/sakibian/sakibian/blob/master/Assets/Hi.gif" width="29px">
 
-# replace contents according to you.
+## About Me🧑🏼‍💻
+
 <table>
-<tr>
-  <td valign="center">
-    🎓 I am currently pursuing my **Bachelor's in Computer Science Engineering**.
-    🌱 I am currently learning **Java** and also interested in **Web Development**.
-    🎯 My Goal is to Contribute to as many **open source project** as possible.
-    ✨ I love to create different types of **contents**.
+  <tr>
+    <td valign="center">
+      
+🎓 I am currently pursuing my career as **Full Time Remote Web Developer**.
+
+🌱 I am currently learning **Data structure & algorithm** and also interested in **Full Stack Web Development**.
+
+🎯 My Goal is to Contribute to as many **open source project** as possible.
+
+✨ I love to create different types of **contents**.
+
+      
 <td >
-# this is my daily.dev card, you can edit this accordingly
-    <a href="https://app.daily.dev/Astrodevil"><img src="https://api.daily.dev/devcards/81fef2c2311f4739a063dbde61b40fe2.png?r=1fr" width="300" alt="Mr. Ånand's Dev Card"/></a>
-  </td>
-</tr>
-</table>
+      <a href="https://app.daily.dev/sakibian"><img src="https://api.daily.dev/devcards/96f254b7cf174812bebccf03500479d5.png?r=zy2" width="300" alt="Bakibillah Sakib's Dev Card"/></a>
+    </td>
+    
+  </tr>
+  </table>
