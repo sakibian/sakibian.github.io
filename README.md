@@ -4,11 +4,17 @@
 <table>
 <tr>
   <td valign="center">
-    - I am currently pursuing my career as **Web Developer**.
-    - I am currently learning **Data structure algorithm** and also interested in **Full Stack Web Development**.
-    - My Goal is to Contribute to as many **open source project** as possible.
-    - I love to create different types of **contents**.
-<td >
+      - I am currently pursuing my career as **Web Developer**.
+  </td>
+  <td>
+      - I am currently learning **Data structure algorithm** and also interested in **Full Stack Web Development**.
+  </td>
+  <td>
+      - My Goal is to Contribute to as many **open source project** as possible.
+  </td>
+  <td>
+      - I love to create different types of **contents**.
+  </td>
 # This is my daily.dev card.
   <a href="https://app.daily.dev/sakibian"><img src="https://api.daily.dev/devcards/96f254b7cf174812bebccf03500479d5.png?r=zy2" width="400" alt="Bakibillah Sakib's Dev Card"/></a>
   </td>
