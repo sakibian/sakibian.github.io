@@ -1,8 +1,10 @@
 {
     "title": "Resume",
-    "name": "startbootstrap-resume",
+    "name": "BakibillahSakib",
     "version": "7.0.5",
     "scripts": {
+        "predeploy": "npm run build",
+        "deploy": "gh-pages build",
         "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
         "build:assets": "node scripts/build-assets.js",
         "build:pug": "node scripts/build-pug.js",
@@ -21,10 +23,10 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/theme/resume",
+    "homepage": "https://sakibian.github.io/sakibian.github.io",
     "bugs": {
-        "url": "https://github.com/StartBootstrap/startbootstrap-resume/issues",
-        "email": "feedback@startbootstrap.com"
+        "url": "https://sakibian.github.io/sakibian.github.io/issues",
+        "email": "sakib.works@gmail.com"
     },
     "license": "MIT",
     "author": "Start Bootstrap",
@@ -43,6 +45,7 @@
         "browser-sync": "2.27.9",
         "chokidar": "3.5.3",
         "concurrently": "6.3.0",
+        "gh-pages": "^4.0.0",
         "postcss": "8.4.12",
         "prettier": "2.6.0",
         "pug": "3.0.2",
