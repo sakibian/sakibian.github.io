@@ -1,6 +1,6 @@
 ![logo](_media/icon.svg ':size=40%')
 
-# Bakibillah Sakib  <small>for yourself.</small>
+# Bakibillah Sakib  <small>2023</small>
 
 > A fresh start.
 
