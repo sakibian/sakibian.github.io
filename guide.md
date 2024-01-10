@@ -1,2 +1,0 @@
-# Guide
-> An awesome Guideline.
