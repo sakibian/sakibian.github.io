@@ -23,15 +23,16 @@
     />
     <link rel="manifest" href="./asset/img/favicon/site.webmanifest" />
     <title>Welcome to Sakibian</title>
+    <link rel="stylesheet" href="./asset/css/app.css" />
   </head>
   <body>
     <main>
-      <nav class="bg-[#F8F8F8] border-gray-200 dark:bg-gray-900 border-b">
+      <nav class="bg-white border-gray-200 dark:bg-gray-900 border-b">
         <div
           class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 mb-1"
         >
           <a
-            href="https://flowbite.com/"
+            href="#home"
             class="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <img src="./asset/img/logo.png" alt="Brand Logo" width="40" />
@@ -54,15 +55,15 @@
               <li>
                 <a
                   type="#"
-                  class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                  class="text-gray-600 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                   >Resume</a
                 >
-                <!-- <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a> -->
+                <!-- <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-gray-700 md:p-0 md:dark:text-gray-500" aria-current="page">Home</a> -->
               </li>
               <li>
                 <a
                   type="#"
-                  class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                  class="text-gray-600 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                   >Hire me</a
                 >
                 <!-- <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a> -->
@@ -73,43 +74,42 @@
             class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
             id="navbar-search"
           >
-            <!-- <div class="relative mt-3 md:hidden">
-                        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                            </svg>
-                        </div>
-                        <input type="text" id="search-navbar" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
-                    </div> -->
             <ul
               class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
             >
               <li>
                 <a
-                  href="#about"
-                  class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                  href="#home"
+                  class="block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   >About</a
                 >
               </li>
               <li>
                 <a
                   href="#experience"
-                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  class="block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   >Experience</a
                 >
               </li>
               <li>
                 <a
                   href="#projects"
-                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  class="block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   >Projects</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
-                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  href="#contact"
+                  class="block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   >Contact</a
                 >
               </li>
@@ -118,32 +118,10 @@
         </div>
       </nav>
       <!-- Hero -->
-      <div class="flex justify-center items-center py-5 h-screen">
+      <div id="home" class="flex justify-center items-center py-5 h-screen">
         <div class="text-center">
           <div class="max-w-lg py-5">
-            <div
-              class="rounded-lg h-auto max-w-full bg-gray-50 py-10 shadow-b-lg transition-all hover:bg-gray-800 hover:text-white"
-            >
-              <!-- <svg class="flex-inline w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                            <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M10 6v4l3.276 3.276M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
-                        </svg> -->
-              <h1
-                class="text-gray-600 hover:text-white text-4xl font-bold mb-4"
-                id="clock"
-              ></h1>
-              <p
-                class="text-gray-600 hover:text-white text-lg font-semibold"
-                id="date"
-              ></p>
-            </div>
-            <p class="text-gray-600 text-2xl mt-5 mb-3">
-              <!-- <span>
-                            <svg class="w-6 h-6 text-gray-500 dark:text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M10.05 4.575a1.575 1.575 0 1 0-3.15 0v3m3.15-3v-1.5a1.575 1.575 0 0 1 3.15 0v1.5m-3.15 0 .075 5.925m3.075.75V4.575m0 0a1.575 1.575 0 0 1 3.15 0V15M6.9 7.575a1.575 1.575 0 1 0-3.15 0v8.175a6.75 6.75 0 0 0 6.75 6.75h2.018a5.25 5.25 0 0 0 3.712-1.538l1.732-1.732a5.25 5.25 0 0 0 1.538-3.712l.003-2.024a.668.668 0 0 1 .198-.471 1.575 1.575 0 1 0-2.228-2.228 3.818 3.818 0 0 0-1.12 2.687M6.9 7.575V12m6.27 4.318A4.49 4.49 0 0 1 16.35 15m.002 0h-.002" />
-                            </svg>                          
-                        </span> -->
-              Good to meet you,
-            </p>
+            <p class="text-gray-600 text-2xl mt-5 mb-3">Good to meet you,</p>
             <p class="text-gray-600 text-4xl mt-2 mb-3">
               I'm Syed Bakibillah Sakib
             </p>
@@ -908,6 +886,131 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="bg-white py-10 pt-4" id="contact">
+        <div class="container mx-auto px-5 py-10">
+          <div class="w-3/4 mx-auto relative border-t border-gray-600">
+            <h2
+              class="absolute flex top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            >
+              <span class="bg-white text-grey-200 px-4 text-4xl font-medium"
+                >Contact</span
+              >
+            </h2>
+
+            <div class="flex px-5 mx-5 py-10">
+              <img
+                class="inline-flex mx-1"
+                src="./asset/img/logo.png"
+                width="200"
+              />
+              <div class="w-100 p-4">
+                <div class="items-center">
+                  <p
+                    class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-4 xl:px-8 dark:text-gray-600"
+                  >
+                    I am currently seeking employment, and I would appreciate it
+                    if you could contact me with any available job
+                    opportunities.
+                  </p>
+                  <div class="sm:px-4 xl:px-8">
+                    <a
+                      href="mailto:sakib.works@gmail.com"
+                      class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-gray-700 rounded-lg hover:bg-gray-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
+                    >
+                      Write message
+                      <svg
+                        class="w-3.5 h-3.5 ms-2 rtl:rotate-180 inline-flex items-center justify-center"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 14 10"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M1 5h12m0 0L9 1m4 4L9 9"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div
+        class="bg-white py-10 pt-4 flex flex-col items-center justify-center"
+        id="footer"
+      >
+        <!-- GitHub and LinkedIn icons -->
+        <div class="flex items-center space-x-4">
+          <a
+            href="https://github.com/sakibian"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              class="w-6 h-6 text-gray-600 dark:text-white"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M12 2c-2.4 0-4.7.9-6.5 2.4a10.5 10.5 0 0 0-2 13.1A10 10 0 0 0 8.7 22c.5 0 .7-.2.7-.5v-2c-2.8.7-3.4-1.1-3.4-1.1-.1-.6-.5-1.2-1-1.5-1-.7 0-.7 0-.7a2 2 0 0 1 1.5 1.1 2.2 2.2 0 0 0 1.3 1 2 2 0 0 0 1.6-.1c0-.6.3-1 .7-1.4-2.2-.3-4.6-1.2-4.6-5 0-1.1.4-2 1-2.8a4 4 0 0 1 .2-2.7s.8-.3 2.7 1c1.6-.5 3.4-.5 5 0 2-1.3 2.8-1 2.8-1 .3.8.4 1.8 0 2.7a4 4 0 0 1 1 2.7c0 4-2.3 4.8-4.5 5a2.5 2.5 0 0 1 .7 2v2.8c0 .3.2.6.7.5a10 10 0 0 0 5.4-4.4 10.5 10.5 0 0 0-2.1-13.2A9.8 9.8 0 0 0 12 2Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/sakib192"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="ml-4"
+          >
+            <svg
+              class="w-6 h-6 text-gray-600 dark:text-white"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M12.5 8.8v1.7a3.7 3.7 0 0 1 3.3-1.7c3.5 0 4.2 2.2 4.2 5v5.7h-3.2v-5c0-1.3-.2-2.8-2.1-2.8-1.9 0-2.2 1.3-2.2 2.6v5.2H9.3V8.8h3.2ZM7.2 6.1a1.6 1.6 0 0 1-2 1.6 1.6 1.6 0 0 1-1-2.2A1.6 1.6 0 0 1 6.6 5c.3.3.5.7.5 1.1Z"
+                clip-rule="evenodd"
+              />
+              <path d="M7.2 8.8H4v10.7h3.2V8.8Z" />
+            </svg>
+          </a>
+        </div>
+        <!-- Reserved Rights -->
+        <div class="mt-4 flex items-center text-gray-900">
+          <div class="flex items-center ml-2">
+            <!-- <img class="mx-1" src="./asset/img/logo.png" width="60" /> -->
+            <span
+              class="font-bold leading-none tracking-tight text-gray-600 dark:text-white mx-1"
+            >
+              <!-- Syed Bakibillah Sakib -->
+              Sakibian
+            </span>
+          </div>
+          &copy;
+          <script>
+            const now = new Date();
+            const yearNow = now.getFullYear();
+            document.write(yearNow);
+          </script>
         </div>
       </div>
     </main>
