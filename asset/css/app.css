@@ -1,3 +1,19 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
+@media (prefers-color-scheme: dark) {
+  body.dark-mode {
+    background-color: red;
+    color: #ffffff;
+  }
+
+  .dark-text {
+    color: #a0aec0;
+  }
+}
+/* .glossy-text {
+  background-image: linear-gradient(45deg, #4b4bff, #ff4bff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: text;
+} */

@@ -22,17 +22,88 @@
       href="./asset/img/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="./asset/img/favicon/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alkalami&family=Reem+Kufi:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mirza:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Mirza:wght@400;500;600;700&family=Scheherazade+New:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Welcome to Sakibian</title>
     <link rel="stylesheet" href="./asset/css/app.css" />
+    <style>
+      @media (prefers-color-scheme: dark) {
+        body.dark-mode {
+          background-color: #1a202c;
+          color: #ffffff;
+        }
+
+        .dark-text {
+          color: #a0aec0;
+        }
+      }
+
+      #quote-container {
+        position: relative;
+        bottom: 20px;
+        left: 50%;
+        font-size: large;
+        transform: translateX(-50%);
+        padding: 10px;
+        z-index: 9999;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        height: 150px;
+        text-align: center;
+      }
+
+      .alkalami-regular {
+        font-family: "Alkalami", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .reem-kufi {
+        font-family: "Reem Kufi", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .mirza-regular {
+        font-family: "Mirza", serif;
+        font-weight: 300;
+        font-style: normal;
+      }
+
+      .cairo {
+        font-family: "Cairo", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-variation-settings: "slnt" 0;
+      }
+    </style>
   </head>
-  <body>
+  <body class="transition-colors ease-in-out duration-300 dark-mode">
     <main>
       <nav class="bg-white border-gray-200 dark:bg-gray-900 border-b">
         <div
           class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 mb-1"
         >
           <a
-            href="#home"
+            href="index.html"
             class="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <img src="./asset/img/logo.png" alt="Brand Logo" width="40" />
@@ -41,37 +112,14 @@
                 class="text-gray-500 text-md font-semibold whitespace-nowrap dark:text-white"
                 id="clock"
               ></span>
-
               <span
                 class="text-gray-500 text-sm font-semibold whitespace-nowrap dark:text-white"
                 id="date"
               ></span>
             </div>
           </a>
-          <div class="flex md:order-2">
-            <ul
-              class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
-            >
-              <li>
-                <a
-                  type="#"
-                  class="text-gray-600 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-                  >Resume</a
-                >
-                <!-- <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-gray-700 md:p-0 md:dark:text-gray-500" aria-current="page">Home</a> -->
-              </li>
-              <li>
-                <a
-                  type="#"
-                  class="text-gray-600 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-                  >Hire me</a
-                >
-                <!-- <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a> -->
-              </li>
-            </ul>
-          </div>
           <div
-            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            class="items-center justify-between w-full md:flex md:w-auto md:order-1 sm:hidden hidden"
             id="navbar-search"
           >
             <ul
@@ -79,55 +127,307 @@
             >
               <li>
                 <a
-                  href="#home"
+                  href="index.html"
                   class="block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   aria-current="page"
-                  >Home</a
                 >
+                  <svg
+                    class="w-6 h-6 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m4 12 8-8 8 8M6 10.5V19c0 .6.4 1 1 1h3v-3c0-.6.4-1 1-1h2c.6 0 1 .4 1 1v3h3c.6 0 1-.4 1-1v-8.5"
+                    />
+                  </svg>
+                </a>
               </li>
               <li>
                 <a
                   href="#about"
                   class="block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                  >About</a
                 >
+                  <svg
+                    class="w-6 h-6 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 18.5A2.5 2.5 0 0 1 7.5 20h0a2.5 2.5 0 0 1-2.4-3.2 3 3 0 0 1-.8-5.2 2.5 2.5 0 0 1 .9-3.2A2.5 2.5 0 0 1 7 5a2.5 2.5 0 0 1 5 .5m0 13v-13m0 13a2.5 2.5 0 0 0 4.5 1.5h0a2.5 2.5 0 0 0 2.4-3.2 3 3 0 0 0 .9-5.2 2.5 2.5 0 0 0-1-3.2A2.5 2.5 0 0 0 17 5a2.5 2.5 0 0 0-5 .5m-8 5a2.5 2.5 0 0 1 3.5-2.3m-.3 8.6a3 3 0 0 1-3-5.2M20 10.5a2.5 2.5 0 0 0-3.5-2.3m.3 8.6a3 3 0 0 0 3-5.2"
+                    />
+                  </svg>
+                </a>
               </li>
               <li>
                 <a
                   href="#experience"
                   class="block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                  >Experience</a
                 >
+                  <svg
+                    class="w-6 h-6 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M12 17a2 2 0 0 1 2 2h-4a2 2 0 0 1 2-2Z"
+                    />
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13.8 9h2.7a2 2 0 1 0-1-3.7 1.9 1.9 0 0 0-.4-1.4 2 2 0 0 0-3.1-.2 2 2 0 0 0-3.5 1.6 2 2 0 1 0-1 3.7h3.4m3-1v3.6M10.1 9v2.6M15 16h0m-6 0h0m12-4.4a1.8 1.8 0 0 1-1.8 1.3 1.9 1.9 0 0 1-1.8-1.3 1.9 1.9 0 0 1-3.6 0 1.8 1.8 0 0 1-1.7 1.3 2 2 0 0 1-2-1.3 1.8 1.8 0 0 1-1.6 1.3 2 2 0 0 1-2-1.3 1.9 1.9 0 0 1-1.8 1.3A1.8 1.8 0 0 1 3 11.6v.4a9 9 0 0 0 18 0v-.4Z"
+                    />
+                  </svg>
+                </a>
               </li>
               <li>
                 <a
                   href="#projects"
                   class="block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                  >Projects</a
                 >
+                  <svg
+                    class="w-6 h-6 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 19V6c0-.6.4-1 1-1h4c.3 0 .6.1.8.4l1.9 2.2c.2.3.5.4.8.4H16c.6 0 1 .4 1 1v1M3 19l3-8h15l-3 8H3Z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="journal.html"
+                  class="block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >
+                  <svg
+                    class="w-6 h-6 text-gray-800 dark:text-white"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6v13m0-13c-2.8-.8-4.7-1-8-1a1 1 0 0 0-1 1v11c0 .6.5 1 1 1 3.2 0 5 .2 8 1m0-13c2.8-.8 4.7-1 8-1 .6 0 1 .5 1 1v11c0 .6-.5 1-1 1-3.2 0-5 .2-8 1"
+                    />
+                  </svg>
+                </a>
               </li>
               <li>
                 <a
                   href="#contact"
                   class="block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                  >Contact</a
+                >
+                  <svg
+                    class="w-6 h-6 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11 16v-5.5C11 8.5 9.4 7 7.5 7m3.5 9H4v-5.5C4 8.5 5.6 7 7.5 7m3.5 9v4M7.5 7H14m0 0V4h2.5M14 7v3m-3.5 6H20v-6a3 3 0 0 0-3-3m-2 9v4m-8-6.5h1"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div id="mobileMenuButton" class="flex md:hidden">
+            <button class="text-gray-600 focus:outline-none">
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="flex md:order-2 hidden md:flex md:w-auto">
+            <ul
+              class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                  >Resume</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                  onclick="toggleDarkMode()"
+                  >Dark Mode</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                  >Hire me</a
                 >
               </li>
             </ul>
           </div>
         </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden">
+          <div class="px-2 pt-2 pb-3 space-y-1">
+            <ul
+              class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Resume</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  onclick="toggleDarkMode()"
+                  >Dark Mode</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Hire me</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="items-center justify-between w-full md:flex md:w-auto md:order-1"
+            id="navbar-search"
+          >
+            <ul
+              class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            >
+              <li>
+                <a
+                  href="index.html"
+                  class="block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  aria-current="page"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#experience"
+                  class="block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >
+                  Portfolio
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#projects"
+                  class="block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >
+                  Live Projects
+                </a>
+              </li>
+              <li>
+                <a
+                  href="journal.html"
+                  class="block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >
+                  Journal
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
+
       <!-- Hero -->
       <div id="home" class="flex justify-center items-center py-5 h-screen">
         <div class="text-center">
           <div class="max-w-lg py-5">
-            <p class="text-gray-600 text-2xl mt-5 mb-3">Good to meet you,</p>
+            <!-- <div
+              id="quote-container"
+              class="text-gray-600 text-shadow-lg rounded-lg p-4 alkalami-regular"
+            ></div> -->
+            <div
+              id="quote-container"
+              class="text-gray-600 text-shadow-lg rounded-lg p-4 mt-3 reem-kufi"
+            >
+              <div
+                id="arabic"
+                class="text-4xl font-thin dark:text-white my-5"
+              ></div>
+              <div id="english" class="mb-1"></div>
+              <div id="attribution"></div>
+            </div>
+            <!-- <p class="text-gray-600 text-2xl mt-5 mb-3">Good to meet you,</p>
             <p class="text-gray-600 text-4xl mt-2 mb-3">
               I'm Syed Bakibillah Sakib
             </p>
             <p class="text-gray-600 text-lg mt-2 mb-3">
               Full-Stack Web Developer
-            </p>
+            </p> -->
           </div>
           <div class="flex items-center justify-center py-4 md:py-8 flex-wrap">
             <button
@@ -185,73 +485,125 @@
         </div>
       </div>
       <!-- About Section -->
-      <div class="bg-gray-200 py-10 pt-4" id="about">
+      <div class="bg-gray-100 py-10 pt-4" id="about">
         <div class="container mx-auto px-5 py-10">
           <div class="w-3/4 mx-auto relative border-t border-gray-600 mt-5">
             <h2
               class="absolute flex top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
             >
-              <span class="bg-gray-200 text-grey-200 px-4 text-4xl font-medium"
-                >About Me</span
+              <span
+                class="bg-gray-100 mb-4 text-4xl font-bold tracking-tight text-gray-900 lg:font-thin lg:text-6xl lg:leading-none dark:text-white lg:text-center xl:px-36 lg:mb-7"
+                >About</span
               >
             </h2>
-            <div class="flex justify-center items-center mt-5">
-              <!-- Left side content -->
-              <div class="w-1/2 p-2">
-                <!-- Your content for the left side -->
-                <p class="text-left py-2 my-1 px-3 mx-auto">
-                  Passionate and versatile Full-Stack Developer with expertise
-                  in crafting seamless and innovative applications. I thrive on
-                  the dynamic interplay of Front-End and Back-End technologies,
-                  consistently pushing the boundaries of what's possible. My
-                  development journey is fueled by an insatiable curiosity for
-                  emerging technologies and a commitment to delivering
-                  excellence.
-                  <br />
-                  <br />
-                  Specializing in:
-                  <br />
-                  Front-End Technologies:
-                  <br />
-                  HTML5, CSS, CSS3 Bootstrap 3 & 4 Materialize CSS JavaScript,
-                  JQuery VueJS
-                  <br />
-                  <br />
-                  Back-End Technologies:
-                  <br />
-                  PHP, MySQL, Laravel, API Integration, Payment Gateway
-                  Integration (including Stripe)
-                  <br />
-                  <br />
-                  My commitment to client satisfaction is unwavering. Beyond
-                  being a freelancer, I am a strategic partner who not only
-                  executes tasks but also plans meticulously for optimal
-                  results. I am adept at following instructions and possess a
-                  proactive approach to project management.
-                  <br />
-                  <br />
-                  Elevate your digital presence with a developer who not only
-                  understands the intricacies of coding but also the art of
-                  creating impactful and user-centric applications. Let's
-                  collaborate for unparalleled solutions that exceed
-                  expectations.
-                  <br /><br />
-                  Thanks.
-                  <br />
-                  <span class="font-semibold text-1xl text-gray-700"
-                    >Syed Bakibillah Sakib</span
-                  >
-                </p>
-              </div>
+          </div>
+          <div class="flex flex-col md:flex-row items-center">
+            <!-- Left side (text) -->
+            <div class="w-full md:w-7/12 px-4 py-8">
+              <h2 class="text-8xl font-bold mb-4 p-0">
+                <span class="text-4xl text-rose-600">Hey 🙋 </span>I’m Sakib.
+                <span class="text-gray-400">Designer</span> &
+                <span class="text-gray-400">Developer</span>
+                <span class="text-5xl"> from </span>
+                <div class="text-red-500 flex text-4xl">
+                  <span class="text-green-500 !important">Bangla</span>
+                  <span>desh.</span>
+                </div>
+                <!-- <span class="text-green-600"><span class="text-red-600 !important"></span></span></span> -->
+              </h2>
+              <p class="text-gray-900 font-normal mb-6">
+                Passionate and dynamic
+                <span class="font-bold text-lg">Full-Stack Developer</span>
+                dedicated to crafting cutting-edge applications that redefine
+                user experiences. <br /><br />
+                With a keen eye for detail and a relentless pursuit of
+                innovation, I seamlessly integrate Front-End and Back-End
+                technologies to deliver exceptional results.
+                <br /><br />
+                In the realm of Front-End, I masterfully wield<span
+                  class="font-bold text-lg"
+                >
+                  HTML5, CSS3,</span
+                >
+                and <span class="font-bold text-lg">JavaScript</span> ,
+                leveraging frameworks like
+                <span class="text-sky-400 font-bold text-lg"
+                  >TailwindCSS,
+                </span>
+                <span class="text-[#712cf9] font-bold text-lg">Bootstrap</span>
+                and
+                <span class="text-[#ee6e73] font-bold text-lg"
+                  >Materialize CSS</span
+                >
+                to create sleek and responsive designs. I am fluent in Vanila
+                JavaScript and libraries such as
+                <span class="font-bold text-lg">jQuery</span> and
+                <span class="font-bold text-lg">React,</span> harnessing their
+                power to bring interactivity and dynamism to every project.
+                <br />
+                <br />
+                On the Back-End, I excel in
+                <span class="font-bold text-lg">PHP</span> and
+                <span class="font-bold text-lg">MySQL,</span> with extensive
+                experience in <span class="font-bold text-lg">Laravel</span> for
+                robust and scalable solutions. My expertise extends to seamless
+                <span class="font-bold text-lg">API</span> integration and
+                <span class="font-bold text-lg">Payment Gateway</span>
+                Integration, including industry leaders like
+                <span class="font-bold text-lg">Stripe,</span> ensuring smooth
+                transactions and functionality. <br /><br />
+                Beyond technical prowess, my approach is marked by a commitment
+                to
+                <span class="font-bold text-lg">client satisfaction</span> and
+                <span class="font-bold text-lg">strategic partnership.</span>
+                <span class="font-bold text-lg"
+                  >I don't just execute tasks; I meticulously plan and
+                  strategize to exceed expectations.</span
+                >
+                Proactive project management is my hallmark, ensuring timelines
+                are met and goals are surpassed. <br /><br />
+                <span class="font-bold text-lg">Let's collaborate</span> to
+                elevate your digital presence with bespoke solutions that
+                resonate with your audience. Together, we'll push the boundaries
+                of possibility and create impactful applications that leave a
+                lasting impression.
+              </p>
+            </div>
 
-              <!-- Right side content -->
-              <div class="w-1/2 p-1">
-                <!-- Your content for the right side -->
-                <img
-                  class="rounded-t-lg rounded-b-lg shadow-t-lg shadow-b-lg border border-grey-800 py-1 my-1 px-3 mx-auto"
-                  src="https://source.unsplash.com/1200x1200/?technology"
-                  alt="image description"
-                />
+            <!-- Right side (image) -->
+            <div class="w-full md:w-5/12 px-4 py-8">
+              <img
+                src="https://source.unsplash.com/1200x1200/?technology"
+                alt="Your Image"
+                class="w-full h-auto rounded-lg shadow-md"
+              />
+
+              <!-- Social media icons -->
+              <div class="flex justify-center mt-4">
+                <a href="#" class="mr-4">
+                  <svg
+                    class="w-8 h-8 fill-current text-gray-600 hover:text-blue-500"
+                    viewBox="0 0 24 24"
+                  >
+                    <!-- Your social media icon SVG code here -->
+                  </svg>
+                </a>
+                <a href="#" class="mr-4">
+                  <svg
+                    class="w-8 h-8 fill-current text-gray-600 hover:text-blue-500"
+                    viewBox="0 0 24 24"
+                  >
+                    <!-- Your social media icon SVG code here -->
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg
+                    class="w-8 h-8 fill-current text-gray-600 hover:text-blue-500"
+                    viewBox="0 0 24 24"
+                  >
+                    <!-- Your social media icon SVG code here -->
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
@@ -265,35 +617,69 @@
             <h2
               class="absolute flex top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
             >
-              <span class="bg-white text-grey-200 px-4 text-4xl font-medium"
+              <span
+                class="bg-white mb-4 text-4xl font-bold tracking-tight text-gray-900 lg:font-thin lg:text-6xl lg:leading-none dark:text-white lg:text-center xl:px-36 lg:mb-7"
                 >Experience</span
               >
             </h2>
+
             <div class="flex px-5 mx-5 py-10">
               <!-- Left side div (25% width) -->
-              <div class="w-1/4 border-r border-gray-300 p-4 px-5 mx-5 py-10">
+              <div
+                class="w-1/4 border-r border-gray-300 p-1 px-2 mx-5 py-10 mt-12"
+              >
                 <!-- Title -->
-                <h2 class="text-lg font-semibold mb-2">Section Title</h2>
+                <h2 class="text-lg font-semibold mb-2">
+                  Web Developer
+                  <span class="text-sm text-gray-900">Freelance</span>
+                </h2>
                 <!-- Company Name -->
-                <p class="text-sm text-gray-600 mb-4">Company Name</p>
+                <p class="text-sm text-gray-600 mb-4">
+                  <a href="http://kibbs.co.uk">Kibbs.co.uk</a>
+                </p>
                 <!-- Bottom border with date and time -->
                 <div class="border-t border-gray-300 pt-4">
-                  <p class="text-xs text-gray-500">Date: January 11, 2024</p>
-                  <p class="text-xs text-gray-500">Time: 12:00 PM</p>
+                  <p class="text-xs text-gray-500">Start: May, 2021</p>
+                  <p class="text-xs text-gray-500">End: September, 2021</p>
                 </div>
               </div>
 
               <!-- Right side div (75% width) -->
               <div class="w-3/4 p-4">
-                <!-- Details List -->
                 <ul class="list-disc py-10">
-                  <li>Detail 1: Lorem ipsum dolor sit amet.</li>
-                  <li>Detail 2: Consectetur adipiscing elit.</li>
-                  <li>
-                    Detail 3: Sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua.
+                  <h2
+                    class="text-lg font-semibold mb-1 mt-8 flex items-center space-x-2"
+                  >
+                    <svg
+                      class="w-6 h-6 text-gray-800 dark:text-white"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73-2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+                      />
+                    </svg>
+                    <span> What have you built? </span>
+                  </h2>
+                  <li class="py-1">
+                    Kibbs offers a convenient booking system for its consumers.
                   </li>
-                  <!-- Add more details as needed -->
+                  <li class="py-1">
+                    Kibbs provides a messaging feature for seamless interaction
+                    with its consumers.
+                  </li>
+                  <li class="py-1">
+                    Kibbs includes an admin panel, allowing operators to manage
+                    appointments efficiently within strict time schedules.
+                  </li>
                 </ul>
               </div>
             </div>
@@ -331,13 +717,13 @@
       </div>
 
       <!-- Projects Section -->
-      <div class="bg-gray-200 py-10 pt-4" id="projects">
+      <div class="bg-gray-100 py-10 pt-4" id="projects">
         <div class="container mx-auto px-5 py-10">
           <div class="w-3/4 mx-auto relative border-t border-gray-600">
             <h2
               class="absolute flex top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
             >
-              <span class="bg-gray-200 text-grey-200 px-4 text-4xl font-medium"
+              <span class="bg-gray-100 text-grey-200 px-4 text-4xl font-medium"
                 >Featured Project</span
               >
             </h2>
@@ -527,15 +913,14 @@
           </div>
         </div>
       </div>
-
       <!-- Other Projects Section -->
-      <div class="bg-gray-200 py-10 pt-4" id="projects">
+      <div class="bg-gray-100 py-10 pt-4" id="projects">
         <div class="container mx-auto px-5 py-10">
           <div class="w-3/4 mx-auto relative border-t border-gray-600">
             <h2
               class="absolute flex top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
             >
-              <span class="bg-gray-200 text-grey-200 px-4 text-4xl font-medium"
+              <span class="bg-gray-100 text-grey-200 px-4 text-4xl font-medium"
                 >Other Projects</span
               >
             </h2>
@@ -946,6 +1331,9 @@
         </div>
       </div>
 
+      <div
+        class="bg-gray-100 py-10 pt-4 flex flex-col items-center justify-center"
+      ></div>
       <!-- Footer -->
       <div
         class="bg-white py-10 pt-4 flex flex-col items-center justify-center"
@@ -1015,6 +1403,13 @@
       </div>
     </main>
     <script>
+      const body = document.body;
+
+      function toggleDarkMode() {
+        console.log("Toggling dark mode");
+        body.classList.toggle("dark-mode");
+      }
+
       function updateClock() {
         const now = new Date();
 
@@ -1042,6 +1437,78 @@
 
       // Update every second
       setInterval(updateClock, 1000);
+
+      document
+        .getElementById("mobileMenuButton")
+        .addEventListener("click", function () {
+          document.getElementById("mobileMenu").classList.toggle("hidden");
+        });
+
+      function showRandomQuote() {
+        // const quotes = [
+        //   "The only way to do great work is to love what you do. - Steve Jobs",
+        //   "Innovation distinguishes between a leader and a follower. - Steve Jobs",
+        //   "Life is 10% what happens to us and 90% how we react to it. - Charles R. Swindoll",
+        //   "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
+        //   "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
+        //   "Believe you can and you're halfway there. - Theodore Roosevelt",
+        //   "It does not matter how slowly you go as long as you do not stop. - Confucius",
+        // ];
+        const quotes = [
+          {
+            arabic: "القلب معبد الله.",
+            english: "The heart is the sanctuary of God.",
+            attribution: "- Prophet Muhammad",
+          },
+          {
+            arabic: "كن روحًا للمكان الذي تكون فيه.",
+            english: "Be the soul of the place where you are.",
+            attribution: "- Al-Razi",
+          },
+          {
+            arabic: "الجرح هو المكان الذي يدخل منه النور إليك.",
+            english: "The wound is the place where the Light enters you.",
+            attribution: "- Al-Razi",
+          },
+          {
+            arabic: "لا تكن عبدًا لغير الله وقد خلقك حرًا.",
+            english:
+              "Do not be a slave to others when Allah has created you free.",
+            attribution: "- Imam Ali",
+          },
+          {
+            arabic: "تكلم فقط عندما تكون كلماتك أجمل من الصمت.",
+            english:
+              "Speak only when your words are more beautiful than silence.",
+            attribution: "- Imam Ali",
+          },
+        ];
+
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        const quote = quotes[randomIndex];
+
+        const arabicElement = document.getElementById("arabic");
+        arabicElement.textContent = quote.arabic;
+
+        const englishElement = document.getElementById("english");
+        englishElement.textContent = quote.english;
+
+        const attributionElement = document.getElementById("attribution");
+        attributionElement.textContent = quote.attribution;
+
+        const quoteContainer = document.getElementById("quote-container");
+        quoteContainer.style.opacity = "1";
+
+        setTimeout(() => {
+          quoteContainer.style.opacity = "0";
+        }, 5000); // Adjust the time here (5000 milliseconds = 5 seconds)
+      }
+
+      // Display a random quote initially
+      showRandomQuote();
+
+      // Display a random quote every 10 seconds
+      setInterval(showRandomQuote, 10000);
     </script>
   </body>
 </html>
